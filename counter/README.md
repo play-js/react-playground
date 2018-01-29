@@ -1,5 +1,9 @@
 # [React Counter](https://github.com/play-js/react-playground/counter)
 
+[![Edit counter](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/play-js/react-playground/tree/counter/counter)
+
+Demo : https://codesandbox.io/s/github/play-js/react-playground/tree/counter/counter
+
 ## TIL(Today I Learned)
 
 ### `this.setState({ count: this.state.count++ }) // X` counting되지 않는 현상
