@@ -13,7 +13,9 @@ handleClick = () => {
 ```
 
 #### Console Log
+```
 Do not mutate state directly. Use setState()
+```
 
 #### 원인 및 분석
 ```js
