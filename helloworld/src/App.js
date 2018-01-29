@@ -3,6 +3,21 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      msg: "sky"
+    }
+  }
+
+  componentDidMount() {
+    var _this = this;
+
+    setTimeout(function() {
+      _this.setState({ msg: "love" });
+    },3000)
+  }
+
   render() {
     return (
       <div className="App">
@@ -11,7 +26,7 @@ class App extends Component {
           <h1 className="App-title">Hello world!</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          {this.state.msg}
         </p>
       </div>
     );
