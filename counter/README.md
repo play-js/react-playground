@@ -4,6 +4,16 @@
 
 Demo : https://codesandbox.io/s/github/play-js/react-playground/tree/counter/counter
 
+## Intsall 
+```
+npm install
+```
+
+## Run
+```
+npm start
+```
+
 ## TIL(Today I Learned)
 
 ### `this.setState({ count: this.state.count++ }) // X` counting되지 않는 현상
