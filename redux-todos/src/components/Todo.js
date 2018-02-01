@@ -6,9 +6,16 @@ class Todo extends Component {
   }
 
   render() {
+    const { text, completed } = this.props.todo;
+
     return (
-      <li onClick={this.handleClick}>
-        text
+      <li
+        onClick={this.handleClick}
+        style={{
+          textDecoration: completed ? 'line-through' : 'none',
+        }}
+      >
+        {text}
       </li>
     );
   }

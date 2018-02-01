@@ -18,18 +18,20 @@ export function completeTodo(todoIndex, complete = true) {
 };
 
 // Reducers
-const initialState = {
-  index: 0,
-  text: "Click ->",
-  completed: false,
-};
+const initialState = [
+  {
+    id: 0,
+    text: "Redux Todos",
+    completed: false,
+  },
+];
 
-export default function todoReducer(state = initialState, action) {
+export default function todos(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO:
       return {
         ...state,
-        index: state.index + 1,
+        id: state.reducer((maxId, todo) => Math.max(maxId, todo.id), -1) + 1,
         text: action.text,
       };
     case COMPLETE_TODO:

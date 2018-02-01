@@ -3,9 +3,16 @@ import { Todo } from 'components';
 
 class TodoList extends Component {
   render() {
+    const { todos } = this.props;
+
     return (
       <ul>
-        <Todo />
+        {todos.map(todo => (
+          <Todo
+            key={todo.id}
+            todo={todo}
+          />
+        ))}
       </ul>
     );
   }
