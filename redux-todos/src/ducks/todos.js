@@ -29,11 +29,13 @@ const initialState = [
 export default function todos(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO:
-      return {
+      return [
         ...state,
-        id: state.reducer((maxId, todo) => Math.max(maxId, todo.id), -1) + 1,
-        text: action.text,
-      };
+        {
+          id: state.reduce((maxId, todo) => Math.max(maxId, todo.id), -1) + 1,
+          text: action.text,
+        }
+      ];
     case COMPLETE_TODO:
       return {
         ...state,

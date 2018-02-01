@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
 
 class TodoInput extends Component {
+  state = {
+    text: "",
+  };
+
+  handleChange = event => {
+    this.setState({ text: event.target.value });
+
+  }
   handleClick = () => {
-    console.log("Click Add Todo!!");
+    const { addTodo } = this.props;
+
+    addTodo(this.state.text);
+    this.setState({ text: "" });
   }
 
   render() {
     return (
       <div>
-        <input />
+        <input
+          onChange={this.handleChange}
+          value={this.state.text}
+        />
         <button onClick={this.handleClick}>Add Todo</button>
       </div>
     );
