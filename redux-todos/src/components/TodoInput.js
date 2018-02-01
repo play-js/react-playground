@@ -7,22 +7,24 @@ class TodoInput extends Component {
 
   handleChange = event => {
     this.setState({ text: event.target.value });
-
-  }
-  handleClick = () => {
-    const { addTodo } = this.props;
-
-    addTodo(this.state.text);
-    this.setState({ text: "" });
   }
 
   handleKeyDown = event => {
     if (event.key === "Enter") {
-      const { addTodo } = this.props;
-
-      addTodo(this.state.text);
-      this.setState({ text: "" });
+      this.handleAddTodo();
     }
+  }
+
+  handleAddTodo = () => {
+    const { addTodo } = this.props;
+    const { text } = this.state;
+
+    if (text === "") {
+      return;
+    }
+
+    addTodo(text.trim());
+    this.setState({ text: "" });
   }
 
   render() {
@@ -33,7 +35,7 @@ class TodoInput extends Component {
           onKeyDown={this.handleKeyDown}
           value={this.state.text}
         />
-        <button onClick={this.handleClick}>Add Todo</button>
+        <button onClick={this.handleAddTodo}>Add Todo</button>
       </div>
     );
   }
