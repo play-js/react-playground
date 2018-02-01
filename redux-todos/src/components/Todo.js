@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 
 class Todo extends Component {
-  render() {
-    const { state, addTodo } = this.props;
+  handleClick = () => {
+    console.log("Todo Click!!!")
+  }
 
+  render() {
     return (
-      <div>
-        {`Text : ${state.text} `}
-        <button
-          onClick={() => addTodo("Success")}
-        >
-          Action Test
-        </button>
-      </div>
+      <li onClick={this.handleClick}>
+        text
+      </li>
     );
   }
 }

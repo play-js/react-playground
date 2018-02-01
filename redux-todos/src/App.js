@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { TodoContainer } from 'containers'
+import { TodoInput, TodoList } from 'components'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <TodoContainer />
+        <TodoInput />
+        <TodoList />
       </div>
     );
   }
