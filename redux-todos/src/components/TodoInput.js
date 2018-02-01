@@ -16,11 +16,21 @@ class TodoInput extends Component {
     this.setState({ text: "" });
   }
 
+  handleKeyDown = event => {
+    if (event.key === "Enter") {
+      const { addTodo } = this.props;
+
+      addTodo(this.state.text);
+      this.setState({ text: "" });
+    }
+  }
+
   render() {
     return (
       <div>
         <input
           onChange={this.handleChange}
+          onKeyDown={this.handleKeyDown}
           value={this.state.text}
         />
         <button onClick={this.handleClick}>Add Todo</button>
