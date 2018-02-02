@@ -8,7 +8,7 @@ const App = ({ todos, actions }) => {
   return (
     <div>
       <TodoInput addTodo={actions.addTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} actions={actions} />
     </div>
   );
 };

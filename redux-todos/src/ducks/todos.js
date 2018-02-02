@@ -10,10 +10,10 @@ export function addTodo(text) {
   };
 };
 
-export function completeTodo(todoIndex, complete = true) {
+export function completeTodo(id) {
   return {
     type: COMPLETE_TODO,
-    todoIndex,
+    id,
   };
 };
 
@@ -37,10 +37,11 @@ export default function todos(state = initialState, action) {
         }
       ];
     case COMPLETE_TODO:
-      return {
-        ...state,
-        completed: action.completed,
-      };
+      return state.map(todo =>
+        (todo.id === action.id)
+          ? { ...todo, completed: !todo.completed, }
+          : todo
+      );
     default:
       return state;
   }

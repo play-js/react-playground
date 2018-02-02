@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 
 class Todo extends Component {
   handleClick = () => {
-    console.log("Todo Click!!!")
+    const { todo, completeTodo } = this.props;
+    
+    completeTodo(todo.id);
   }
 
   render() {
-    const { text, completed } = this.props.todo;
+    const { todo } = this.props;
+    const { text, completed } = todo;
 
     return (
       <li

@@ -3,7 +3,7 @@ import { Todo } from 'components';
 
 class TodoList extends Component {
   render() {
-    const { todos } = this.props;
+    const { todos, actions } = this.props;
 
     return (
       <ul>
@@ -11,6 +11,7 @@ class TodoList extends Component {
           <Todo
             key={todo.id}
             todo={todo}
+            completeTodo={actions.completeTodo}
           />
         ))}
       </ul>
