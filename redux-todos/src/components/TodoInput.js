@@ -19,7 +19,7 @@ class TodoInput extends Component {
     const { addTodo } = this.props;
     const { text } = this.state;
 
-    if (text === "") {
+    if (text.trim() === "") {
       return;
     }
 
