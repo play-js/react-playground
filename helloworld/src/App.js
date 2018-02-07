@@ -38,11 +38,11 @@ class App extends Component {
    */
   
   // componentDidMount() {
-    // var _this = this;
+  //   var _this = this;
 
-    // setTimeout(function() {
-    //   _this.setState({ msg: "love" });
-    // },3000)
+  //   setTimeout(function() {
+  //     _this.setState({ msg: "love" });
+  //   },3000)
   // }
 
   // //컴포넌트가 prop을 새로 받았을 때 실행
@@ -56,6 +56,12 @@ class App extends Component {
   // //컴포넌트 업데이트 전 실행
   // componentWillUpdate(){
   // }
+
+  // //컴포넌트 리렌더링 후 실행
+  // componentDidUpdate(){}
+
+  // //컴포넌트가 dom에서 사라진 후 실행
+  // componentWillUnmount() {}
 
   // //컴포넌트 리렌더링 후 실행
   // componentDidUpdate(){}
