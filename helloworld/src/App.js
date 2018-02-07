@@ -45,31 +45,31 @@ class App extends Component {
    * 보통 javascript 프레임웍 연동이나 setTimeout, ajax 처리 
    */
   
-  componentDidMount() {
-    // var _this = this;
+  // componentDidMount() {
+  //   // var _this = this;
 
-    // setTimeout(function() {
-    //   _this.setState({ msg: "love" });
-    // },3000)
-  }
+  //   // setTimeout(function() {
+  //   //   _this.setState({ msg: "love" });
+  //   // },3000)
+  // }
 
-  //컴포넌트가 prop을 새로 받았을 때 실행
-  componentWillReceiveProps() {
-  }
+  // //컴포넌트가 prop을 새로 받았을 때 실행
+  // componentWillReceiveProps() {
+  // }
 
-  //prop/state가 변경되었을 때, 리렌더링을 할지말지 정함
-  shouldComponentUpdate() {
-  }
+  // //prop/state가 변경되었을 때, 리렌더링을 할지말지 정함
+  // shouldComponentUpdate() {
+  // }
 
-  //컴포넌트 업데이트 전 실행
-  componentWillUpdate(){
-  }
+  // //컴포넌트 업데이트 전 실행
+  // componentWillUpdate(){
+  // }
 
-  //컴포넌트 리렌더링 후 실행
-  componentDidUpdate(){}
+  // //컴포넌트 리렌더링 후 실행
+  // componentDidUpdate(){}
 
-  //컴포넌트가 dom에서 사라진 후 실행
-  componentWillUnmount() {}
+  // //컴포넌트가 dom에서 사라진 후 실행
+  // componentWillUnmount() {}
 
 
 }
