@@ -12,4 +12,4 @@ class Title extends React.Component {
     }
 }
 
-export default Content;
+export default Title;
