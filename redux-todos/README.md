@@ -4,6 +4,8 @@
 
 Demo : [Sandbox](https://codesandbox.io/s/github/play-js/react-playground/tree/master/redux-todos)
 
+![demo.gif](./demo.gif)
+
 ## Install
 ```
 npm install
