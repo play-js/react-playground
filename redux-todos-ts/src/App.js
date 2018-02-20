@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+// Custom
+import { TodoInput, TodoList } from 'components';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <input />
-        <button>Add</button>
+        <TodoInput />
+        <TodoList />
       </div>
     );
   }
