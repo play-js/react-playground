@@ -1,9 +1,16 @@
+import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { App } from 'components/App';
+// Custom
+import { TodoInput, TodoList } from 'components';
 import * as TodoActions from 'ducks/todos';
 
-const AppContainer;
+const App = ({ todos, actions }) => (
+  <div>
+    <TodoInput />
+    <TodoList todos={todos} />
+  </div>
+);
 
 const mapStateToProps = state => ({
   todos: state.todos,
@@ -16,4 +23,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(AppContainer);
+)(App);
