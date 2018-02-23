@@ -9,7 +9,7 @@ class TodoInput extends Component {
     this.setState({ input: event.target.value });
   }
 
-  handleClick = () => {
+  handleAdd = () => {
     const { addTodo } = this.props;
     const { input } = this.state;
 
@@ -17,8 +17,14 @@ class TodoInput extends Component {
     this.setState({ input: "" });
   }
 
+  handleKeyDown = event => {
+    if (event.key === "Enter") {
+      this.handleAdd();
+    }
+  }
+
   render() {
-    const { handleChange, handleClick } = this;
+    const { handleChange, handleAdd, handleKeyDown } = this;
     const { input } = this.state;
 
     return (
@@ -26,8 +32,9 @@ class TodoInput extends Component {
         <input
           value={input}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
         />
-        <button onClick={handleClick}>Add</button>
+        <button onClick={handleAdd}>Add</button>
       </div>
     );
   }

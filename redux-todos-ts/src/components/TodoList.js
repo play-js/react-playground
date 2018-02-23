@@ -4,7 +4,6 @@ class TodoList extends Component {
   render() {
     const { todos } = this.props;
 
-    console.log(todos);
     return (
       <ul>
         {
