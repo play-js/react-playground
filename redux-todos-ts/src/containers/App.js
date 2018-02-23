@@ -7,7 +7,7 @@ import * as TodoActions from 'ducks/todos';
 
 const App = ({ todos, actions }) => (
   <div>
-    <TodoInput />
+    <TodoInput {...actions} />
     <TodoList todos={todos} />
   </div>
 );

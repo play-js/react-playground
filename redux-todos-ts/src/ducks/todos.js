@@ -17,7 +17,7 @@ const todos = (state = initialState, action) => {
     case ADD_TODO:
       return [
         ...state,
-        { id: state.reducer((maxId, todo) => Math.max(todo.id, maxId), -1) + 1, text: action.text, completed: false },
+        { id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1, text: action.text, completed: false },
       ];
     default:
       return state;
