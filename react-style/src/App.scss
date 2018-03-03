@@ -1,9 +1,16 @@
 .App {
   text-align: center;
+  &:hover {
+    background: lighten($color: red, $amount: 20%)
+  }
+}
+
+body {
+  background: lighten($color: green, $amount: 50%)
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 2s linear;
   height: 80px;
 }
 
@@ -12,6 +19,9 @@
   height: 150px;
   padding: 20px;
   color: white;
+  &:hover {
+    background: lighten($color: blue, $amount: 20%)
+  }
 }
 
 .App-title {
