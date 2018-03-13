@@ -8,6 +8,7 @@ class Counter extends React.Component {
 
     render() {
         let input;
+        console.log(this.props.add)
 
         return (
             <ul>
