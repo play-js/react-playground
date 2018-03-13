@@ -18,7 +18,7 @@ class Counter extends React.Component {
                 <input ref={node => {
                     input = node;
                 }} value={this.state.inputVal}/>
-                <button onClick={this.props.add(input.value)}>ADD</button>
+                <button onClick={() => this.props.add(this.state.inputVal)}>ADD</button>
 
                 <li id={this.props.id} className={this.props.completed}>{this.props.text}</li>
             </ul>

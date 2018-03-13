@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <Title title={this.props.title}/>
-        <TODO/>
+        <TODO add={() => this.props.add}/>
       </div>
     );
   }
@@ -33,7 +33,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    add: dispatch(input => addTodo(input)), 
+    add: dispatch(addTodo()), 
     remove: dispatch(removeTodo())
   }
 }
