@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Counter extends React.Component {
+class Todo extends React.Component {
 
     state = {
         inputVal: 0
@@ -8,7 +8,6 @@ class Counter extends React.Component {
 
     render() {
         let input;
-        console.log(this.props.add)
 
         return (
             <ul>
@@ -31,4 +30,4 @@ class Counter extends React.Component {
     }
 }
 
-export default Counter;
+export default Todo;

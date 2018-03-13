@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addTodo, removeTodo } from './actions/todo';
 import Title from './components/Title';
-import TODO from './components/TODO';
+import Todo from './components/Todo';
 
 class App extends Component {
   // add = () => {
@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <Title title={this.props.title} />
-        <TODO add={this.props.add} />
+        <Todo add={this.props.add} />
       </div>
     );
   }
