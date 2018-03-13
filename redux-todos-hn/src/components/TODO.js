@@ -3,10 +3,10 @@ import React from 'react';
 class Counter extends React.Component {
 
     state = {
-        inputVal : 0
+        inputVal: 0
     }
 
-    render(){
+    render() {
         let input;
 
         return (
@@ -15,9 +15,13 @@ class Counter extends React.Component {
 
                 <button onClick={this.props.delete}>-</button>
                 <button onClick={this.props.add}>+</button> */}
-                <input ref={node => {
-                    input = node;
-                }} value={this.state.inputVal}/>
+                <input
+                    ref={node => {
+                        input = node;
+                    }}
+                    value={this.state.inputVal}
+                    onChange={event => this.setState({ inputVal: event.target.value })}
+                />
                 <button onClick={() => this.props.add(this.state.inputVal)}>ADD</button>
 
                 <li id={this.props.id} className={this.props.completed}>{this.props.text}</li>
