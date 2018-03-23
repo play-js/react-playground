@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <Title title={this.props.title} />
-        <TODO add={add} /> // App의 add를 TODO의 add로 연결해줘야함
+        <TODO add={add} /> {/*App의 add를 TODO의 add로 연결해줘야함*/}
       </div>
     );
   }
@@ -36,7 +36,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    add: () => dispatch(addTodo()),
+    add: () => dispatch(addTodo()), // addTodo의 parameter는 어디에??
     remove: () => dispatch(removeTodo())
   };
 }
