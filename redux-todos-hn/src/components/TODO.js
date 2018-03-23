@@ -1,9 +1,20 @@
 import React from 'react';
 
 class Counter extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            inputVal : "",
+            todos: []
+        };
+    }
 
-    state = {
-        inputVal : 0
+    handleClick = () => {
+        this.props.add(this.state.inputVal);
+    }
+
+    handleChange = (e) => {
+        this.setState({inputVal: e.target.value});
     }
 
     render(){
@@ -11,14 +22,8 @@ class Counter extends React.Component {
 
         return (
             <ul>
-                {/* <h1>{this.props.number}</h1>
-
-                <button onClick={this.props.delete}>-</button>
-                <button onClick={this.props.add}>+</button> */}
-                <input ref={node => {
-                    input = node;
-                }} value={this.state.inputVal}/>
-                <button onClick={this.props.add(input.value)}>ADD</button>
+                <input onChange={this.handleChange}/>
+                <button onClick={this.handleClick}>ADD</button>
 
                 <li id={this.props.id} className={this.props.completed}>{this.props.text}</li>
             </ul>

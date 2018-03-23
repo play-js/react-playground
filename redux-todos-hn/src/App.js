@@ -33,8 +33,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    add: dispatch(input => addTodo(input)), 
-    remove: dispatch(removeTodo())
+    add: () => dispatch(addTodo()), 
+    remove: () => dispatch(removeTodo())
   }
 }
 
