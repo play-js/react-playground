@@ -5,21 +5,14 @@ import Title from "./components/Title";
 import TODO from "./components/TODO";
 
 class App extends Component {
-  // add = () => {
-  //   this.props.dispatch({type: 'ADD'});
-  // }
-  // delete = () => {
-  //   this.props.dispatch({type: 'DELETE'});
-  // }
-
   render() {
-    const { add } = this.props;
+    const { add, todos } = this.props;
     // console.log(add);
 
     return (
       <div className="App">
         <Title title={this.props.title} />
-        <TODO add={add} /> {/*App의 add를 TODO의 add로 연결해줘야함*/}
+        <TODO add={add} todos={todos}/>
       </div>
     );
   }
@@ -27,16 +20,17 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    // count: state.count
-    id: 0,
-    text: "Javascript",
-    completed: false
+    // item: state.item
+    // id: 0,
+    // text: "Javascript",
+    // completed: false,
+    todos: state.todos
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    add: () => dispatch(addTodo()), // addTodo의 parameter는 어디에??
+    add: text => dispatch(addTodo(text)),
     remove: () => dispatch(removeTodo())
   };
 }
@@ -45,5 +39,4 @@ App.defaultProps = {
   title: "TODO LIST!"
 };
 
-// export default connect(mapStateToProps)(App);
 export default connect(mapStateToProps, mapDispatchToProps)(App);

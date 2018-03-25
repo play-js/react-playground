@@ -4,13 +4,16 @@ const initialState = [
     { id: 0, text: "Data", completed: false },
 ];
 
-function todoReducer(state = initialState, action) {
+function todoReducer(state = { todos: [] }, action) {
     switch (action.type) {
         case ADD_TODO:
-            return [
-                ...state,
-                { id: state.id, text: action.text, completed: false },
-            ]
+        return Object.assign({}, state, {
+                todos : state.todos.concat({
+                    id: action.id,
+                    text: action.text,
+                    completed: false
+                })
+            });
         default:
             return state;
     }

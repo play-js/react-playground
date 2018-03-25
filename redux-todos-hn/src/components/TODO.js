@@ -4,8 +4,7 @@ class Counter extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            inputVal : "",
-            todos: []
+            inputVal : ""
         };
     }
 
@@ -21,12 +20,20 @@ class Counter extends React.Component {
         let input;
 
         return (
-            <ul>
+            <div>
                 <input onChange={this.handleChange}/>
                 <button onClick={this.handleClick}>ADD</button>
 
-                <li id={this.props.id} className={this.props.completed}>{this.props.text}</li>
-            </ul>
+                <ul>
+                {
+                    this.props.todos.map(({ text }, index) => (
+                      <li key={index}>{text}
+                      </li>
+                        )
+                    )
+                }
+                </ul>
+            </div>
         )
     }
 }
