@@ -1,4 +1,4 @@
-import { ADD_TODO, REMOVE_TODO } from '../actions/todo';
+import { ADD_TODO, REMOVE_TODO } from '../actions/TodoAction';
 
 const initialState = [
     { id: 0, text: "Data", completed: false },

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Counter extends React.Component {
+class Todolist extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -11,6 +11,7 @@ class Counter extends React.Component {
     handleClick = (e) => {
         if (e.target.textContent === "ADD") {
             this.props.add(this.state.inputVal);
+            this.setState({inputVal: ""});
         } else {
             this.props.remove(e.target.getAttribute("id"));
         }
@@ -23,7 +24,7 @@ class Counter extends React.Component {
     render(){
         return (
             <div>
-                <input onChange={this.handleChange}/>
+                <input onChange={this.handleChange} value={this.state.inputVal}/>
                 <button onClick={this.handleClick}>ADD</button>
 
                 <ul>
@@ -40,4 +41,4 @@ class Counter extends React.Component {
     }
 }
 
-export default Counter;
+export default Todolist;

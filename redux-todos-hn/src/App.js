@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addTodo, removeTodo } from "./actions/todo";
+import { addTodo, removeTodo } from "./actions/TodoAction";
 import Title from "./components/Title";
-import TODO from "./components/TODO";
+import Todolist from "./components/Todolist";
 
 class App extends Component {
   render() {
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Title title={title} />
-        <TODO add={add} remove={remove} todos={todos}/>
+        <Todolist add={add} remove={remove} todos={todos}/>
       </div>
     );
   }

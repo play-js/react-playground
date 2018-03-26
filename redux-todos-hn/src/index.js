@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 
 import { createStore } from 'redux';
-import todoReducer from './reducers/todos';
+import todoReducer from './reducers/TodoReducer';
 import { Provider } from 'react-redux';
 
 const store = createStore(todoReducer);
