@@ -12,10 +12,9 @@ export function addTodo(text) {
     };
 };
 
-export function removeTodo(text) {
+export function removeTodo(id) {
     return {
         type: REMOVE_TODO,
-        text: text
-
+        id: id
     };
 };

@@ -6,13 +6,12 @@ import TODO from "./components/TODO";
 
 class App extends Component {
   render() {
-    const { add, todos } = this.props;
-    // console.log(add);
+    const { add, remove, todos, title } = this.props;
 
     return (
       <div className="App">
-        <Title title={this.props.title} />
-        <TODO add={add} todos={todos}/>
+        <Title title={title} />
+        <TODO add={add} remove={remove} todos={todos}/>
       </div>
     );
   }
@@ -20,10 +19,6 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    // item: state.item
-    // id: 0,
-    // text: "Javascript",
-    // completed: false,
     todos: state.todos
   };
 }
@@ -31,7 +26,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     add: text => dispatch(addTodo(text)),
-    remove: () => dispatch(removeTodo())
+    remove: id => dispatch(removeTodo(id))
   };
 }
 

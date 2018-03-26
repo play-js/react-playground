@@ -8,8 +8,12 @@ class Counter extends React.Component {
         };
     }
 
-    handleClick = () => {
-        this.props.add(this.state.inputVal);
+    handleClick = (e) => {
+        if (e.target.textContent === "ADD") {
+            this.props.add(this.state.inputVal);
+        } else {
+            this.props.remove(e.target.getAttribute("id"));
+        }
     }
 
     handleChange = (e) => {
@@ -17,8 +21,6 @@ class Counter extends React.Component {
     }
 
     render(){
-        let input;
-
         return (
             <div>
                 <input onChange={this.handleChange}/>
@@ -26,9 +28,9 @@ class Counter extends React.Component {
 
                 <ul>
                 {
-                    this.props.todos.map(({ text }, index) => (
-                      <li key={index}>{text}
-                      </li>
+                    this.props.todos.map(({ text, id }, index) => (
+                      <li key={index}>{text} 
+                      <button id={id} onClick={this.handleClick}>REMOVE</button></li>
                         )
                     )
                 }
