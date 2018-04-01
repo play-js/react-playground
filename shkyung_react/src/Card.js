@@ -1,14 +1,38 @@
 import React, { Component } from 'react';
 import CheckList from './CheckList';
+import marked from 'marked'
 
 class Card extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			showDetails: false
+		};
+	}
+
+	toggleDetails() {
+		this.setState({showDetails: !this.state.showDetails});
+	}
+
     render() {
-        return (
-            <div className="card">
-			 	<div className="card_title">{this.props.title}</div>
-				<div className="card_details">{this.props.desc}
+    	let cardDetails;
+
+    	if (this.state.showDetails) {
+    		cardDetails = (
+    			<div className={"card_details"}>
+    			<span dangerouslySetInnerHTML={{__html:marked(this.props.desc)}} />
 					<CheckList cardId={this.props.id} tasks={this.props.tasks} />
 				</div>
+    		);
+    	}
+        return (
+            <div className="card">
+			 	<div className={this.state.showDetails ? "card_title card_title--is-open" : "card_title"} 
+			 	onClick={this.toggleDetails.bind(this)}>
+			 		{this.props.title}
+			 	</div>
+				{cardDetails}
 			</div>
         );
     }

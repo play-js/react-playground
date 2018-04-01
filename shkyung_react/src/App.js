@@ -1,17 +1,18 @@
 import React from 'react';
 import KanbanBoard from './KanbanBoard';
 
+// using markdown
 let cardsList = [{
         id: 1,
         title: "Read the Book",
-        desc: "I should read the whole book",
+        desc: "I should read the **whole** book",
         status: "in-progress",
         tasks: []
     },
     {
         id: 2,
         title: "Write some code",
-        desc: "Code along with the samples in the book",
+        desc: "Code along with the samples in the book. <br> The complete source can be found at [github](http://github.com/pro-react)",
         status: "todo",
         tasks: [{
                 id: 1,
