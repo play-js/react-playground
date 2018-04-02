@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+//import App from './App';
 import style from './style.css';
 import registerServiceWorker from './registerServiceWorker';
+import ContactsApp from "./contactApp/ContactsApp"
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
