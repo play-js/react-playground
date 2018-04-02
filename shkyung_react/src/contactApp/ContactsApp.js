@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import PropTypes from 'prop-types';
+import ContactList from './ContactList';
+import SearchBar from './SearchBar';
 
 class ContactsApp extends Component {
-    reunder() {
+    render() {
         return (
             <div>
                 <SearchBar />
@@ -16,7 +18,6 @@ class ContactsApp extends Component {
 ContactsApp.propTypes = {
     contacts: PropTypes.arrayOf(PropTypes.object)
 }
-
 
 let contacts = [
     { name: "Cassio Zen", email: "cassiozen@gmail.com" },

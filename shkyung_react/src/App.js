@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'react-dom';
 import KanbanBoard from './KanbanBoard';
 
 // using markdown
@@ -38,5 +39,7 @@ class App extends React.Component {
         return <KanbanBoard cards={cardsList} / >
     }
 }
+
+render(<App />, document.getElementById("root"));
 
 export default App;

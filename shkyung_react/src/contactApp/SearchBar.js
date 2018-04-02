@@ -7,3 +7,5 @@ class SearchBar extends Component {
         return <input type="search" placeholder="search" />
     }
 }
+
+export default SearchBar; 

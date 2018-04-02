@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import PropTypes from 'prop-types';
+import ContactItem from './ContactItem';
 
 class ContactList extends Component {
     render() {
@@ -18,3 +19,5 @@ class ContactList extends Component {
 ContactList.propTypes = {
     contacts: PropTypes.arrayOf(PropTypes.object)
 }
+
+export default ContactList; 
