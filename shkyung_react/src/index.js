@@ -3,6 +3,6 @@
 //import App from './App';
 //import style from './style.css';
 //import registerServiceWorker from './registerServiceWorker';
-import ContactsApp from "./contactApp/ContactsApp"
+import ContactsAppContainer from "./contactApp/ContactsAppContainer"
 
 //registerServiceWorker();
