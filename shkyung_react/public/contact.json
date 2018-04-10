@@ -1,26 +1,26 @@
-{[
-    {
-        "name": "Cassio Zen",
-        "email": "cassiozen@gmail.com"
-    },
-    {
-        "name": "Dan Avramov",
-        "email": "gaearon@somewhere.com"
-    },
-    {
-        "name": "Pete Hunt",
-        "email": "floydophone@somehwere.com"
-    },
-    {
-        "name": "Paul OShannessy",
-        "email": "zpao@somehwere.com"
-    },
-    {
-        "name": "Ryan Florence",
-        "email": "rpflorence@somehwhere.com"
-    },
-    {
-        "name": "Sebastian Markbage",
-        "email": "sebmarkbage@here.com"
-    }
-]}
+[
+  {
+    "name": "Cassio Zen",
+    "email": "cassiozen@gmail.com"
+  },
+  {
+    "name": "Dan Avramov",
+    "email": "gaearon@somewhere.com"
+  },
+  {
+    "name": "Pete Hunt",
+    "email": "floydophone@somehwere.com"
+  },
+  {
+    "name": "Paul OShannessy",
+    "email": "zpao@somehwere.com"
+  },
+  {
+    "name": "Ryan Florence",
+    "email": "rpflorence@somehwhere.com"
+  },
+  {
+    "name": "Sebastian Markbage",
+    "email": "sebmarkbage@here.com"
+  }
+]
